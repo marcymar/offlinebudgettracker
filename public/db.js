@@ -18,7 +18,7 @@ request.onerror = event => {
   console.log(event.target.errorCode)
 }
 
-const saveItem = transaction => {
+const saveRecord = transaction => {
   const transaction = db.transaction(['pending'], 'readwrite')
   const store = transaction.objectStore('pending')
   store.add(transaction)
